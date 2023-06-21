@@ -107,7 +107,7 @@ public class OrderDAOImpl implements OrderDAO {
         Connection con = factory.getConnection();
         ArrayList<Order> gao = new ArrayList<Order>();
         //Creating statement object
-        PreparedStatement ps = con.prepareStatement("select o.ordid, o.custid, o.orderdate, od.prodid, od.qty, o.orderstatus from orders as o inner join orderdetails as od on o.ordid = od.ordid;");
+        PreparedStatement ps = con.prepareStatement("select o.ordid, o.custid, o.orderdate, od.prodid, od.qty, o.orderstatus from orders o, orderdetails od where o.ordid = od.ordid");
         //Executing query
         ResultSet rs = ps.executeQuery();
         while(rs.next())

@@ -27,7 +27,7 @@ public class MySqlConnectionFactory implements ConnectionFactory {
     }*/
     public Connection getConnection() throws Exception
     {
-        FileReader reader=new FileReader("D:\\Projects\\Project-3 (Order Processing System)\\OPS\\src\\dao\\MySQL.properties");
+        FileReader reader=new FileReader("D:\\Projects\\Project-4 (OPS with Oracle)\\OPS_Oracle\\src\\dao\\Oracle.properties");
         Properties p = new Properties();
         p.load(reader);
         //Loading JDBC driver
